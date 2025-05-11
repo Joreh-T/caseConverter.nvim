@@ -26,11 +26,11 @@ function M.setup_keymaps(opts)
         local camel_mapping = opts.camel_mapping or M.defaults.camel_mapping
         local pascal_mapping = opts.pascal_mapping or M.defaults.pascal_mapping
         
-        vim.api.nvim_set_keymap('v', toggle_mapping, ':<C-u>ToggleCase<CR>', { noremap = true, silent = true })
-        vim.api.nvim_set_keymap('v', cycle_mapping, ':<C-u>CycleCase<CR>', { noremap = true, silent = true })
-        vim.api.nvim_set_keymap('v', snake_mapping, ':<C-u>ToSnakeCase<CR>', { noremap = true, silent = true })
-        vim.api.nvim_set_keymap('v', camel_mapping, ':<C-u>ToCamelCase<CR>', { noremap = true, silent = true })
-        vim.api.nvim_set_keymap('v', pascal_mapping, ':<C-u>ToPascalCase<CR>', { noremap = true, silent = true })
+        vim.api.nvim_set_keymap('v', toggle_mapping, ':<C-u>ToggleCase<CR>', { noremap = true, silent = true, desc = "Convert between snake and camel" })
+        vim.api.nvim_set_keymap('v', cycle_mapping, ':<C-u>CycleCase<CR>', { noremap = true, silent = true, desc = "Cycle through cases"})
+        vim.api.nvim_set_keymap('v', snake_mapping, ':<C-u>ToSnakeCase<CR>', { noremap = true, silent = true,  desc = "Convert to snake_case"})
+        vim.api.nvim_set_keymap('v', camel_mapping, ':<C-u>ToCamelCase<CR>', { noremap = true, silent = true, desc = "Convert to camelCase"})
+        vim.api.nvim_set_keymap('v', pascal_mapping, ':<C-u>ToPascalCase<CR>', { noremap = true, silent = true, desc = "Convert to PascalCase"})
     end
 end
 
