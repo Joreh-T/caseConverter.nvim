@@ -1,0 +1,100 @@
+*case-converter.txt*  Convert between snake_case, camelCase, and PascalCase
+
+==============================================================================
+CONTENTS                                                *case-converter-contents*
+
+    1. Introduction .................... |case-converter-introduction|
+    2. Usage ........................... |case-converter-usage|
+    3. Commands ........................ |case-converter-commands|
+    4. Mappings ........................ |case-converter-mappings|
+    5. Configuration ................... |case-converter-configuration|
+    6. Examples ........................ |case-converter-examples|
+    7. About ........................... |case-converter-about|
+
+==============================================================================
+1. INTRODUCTION                                     *case-converter-introduction*
+
+case-converter is a Neovim plugin that converts between snake_case, camelCase,
+and PascalCase in visual mode.
+
+==============================================================================
+2. USAGE                                                 *case-converter-usage*
+
+1. Select text in visual mode
+2. Use one of the following keybindings:
+   - `<Leader>tc` - Toggle between snake_case and camelCase/PascalCase
+   - `<Leader>cc` - Cycle through cases: snake_case → camelCase → PascalCase → snake_case
+   - `<Leader>ts` - Convert to snake_case
+   - `<Leader>tm` - Convert to camelCase
+   - `<Leader>tp` - Convert to PascalCase
+
+==============================================================================
+3. COMMANDS                                           *case-converter-commands*
+
+                                                              *:ToggleCase*
+:ToggleCase          Toggle case for the current visual selection.
+                     If the text is in snake_case, it will be converted to
+                     camelCase. If it's in camelCase or PascalCase, it will
+                     be converted to snake_case.
+
+                                                              *:CycleCase*
+:CycleCase           Cycle through cases for the current visual selection.
+                     The cycle is: snake_case → camelCase → PascalCase → snake_case
+
+                                                             *:ToSnakeCase*
+:ToSnakeCase         Convert the current visual selection to snake_case.
+
+                                                             *:ToCamelCase*
+:ToCamelCase         Convert the current visual selection to camelCase.
+
+                                                            *:ToPascalCase*
+:ToPascalCase        Convert the current visual selection to PascalCase.
+
+==============================================================================
+4. MAPPINGS                                           *case-converter-mappings*
+
+The following mappings are available in visual mode:
+
+<Leader>tc           Toggle between snake_case and camelCase/PascalCase
+<Leader>cc           Cycle through cases: snake_case → camelCase → PascalCase → snake_case
+<Leader>ts           Convert to snake_case
+<Leader>tm           Convert to camelCase
+<Leader>tp           Convert to PascalCase
+
+==============================================================================
+5. CONFIGURATION                                 *case-converter-configuration*
+
+You can customize the plugin by passing options to the setup function:
+
+>
+    require('case_converter').setup({
+      -- Disable default mappings
+      mappings = false,
+      
+      -- Or customize the default mappings
+      toggle_mapping = '<Leader>tc',  -- Toggle between cases
+      cycle_mapping = '<Leader>cc',   -- Cycle through cases
+      snake_mapping = '<Leader>ts',   -- Convert to snake_case
+      camel_mapping = '<Leader>tm',   -- Convert to camelCase
+      pascal_mapping = '<Leader>tp'   -- Convert to PascalCase
+    })
+<
+
+==============================================================================
+6. EXAMPLES                                           *case-converter-examples*
+
+snake_case ↔ camelCase ↔ PascalCase:
+  - `snake_case_variable` ↔ `snakeCaseVariable` ↔ `SnakeCaseVariable`
+  - `another_example` ↔ `anotherExample` ↔ `AnotherExample`
+  - `HTTP_REQUEST` ↔ `httpRequest` ↔ `HttpRequest`
+
+==============================================================================
+7. ABOUT                                                 *case-converter-about*
+
+case-converter is maintained by Your Name <your.email@example.com>
+GitHub: https://github.com/your-username/case-converter
+
+License: MIT
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl:

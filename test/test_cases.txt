@@ -1,0 +1,9 @@
+snake_case_variable
+another_example
+HTTP_REQUEST
+CONSTANT_VALUE
+
+camelCaseVariable
+anotherExample
+httpRequest
+mixedCASE_style
