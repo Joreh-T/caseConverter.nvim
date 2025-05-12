@@ -15,7 +15,7 @@ A Neovim plugin that converts between snake_case and camelCase in visual mode.
 
 ```lua
 use {
-  'your-username/case-converter',
+  'Joreh-T/caseConverter.nvim',
   config = function()
     require('case_converter').setup({
       -- Optional configuration
@@ -28,7 +28,7 @@ use {
 
 ```lua
 {
-  'your-username/case-converter',
+  'Joreh-T/caseConverter.nvim',
   config = function()
     require('case_converter').setup({
       -- Optional configuration
@@ -40,7 +40,7 @@ use {
 ### Using [vim-plug](https://github.com/junegunn/vim-plug)
 
 ```vim
-Plug 'your-username/case-converter'
+Plug 'Joreh-T/caseConverter.nvim'
 ```
 
 ## Usage

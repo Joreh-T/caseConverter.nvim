@@ -22,8 +22,8 @@ and PascalCase in visual mode.
 
 1. Select text in visual mode
 2. Use one of the following keybindings:
-   - `<Leader>tc` - Toggle between snake_case and camelCase/PascalCase
-   - `<Leader>cc` - Cycle through cases: snake_case → camelCase → PascalCase → snake_case
+   - `<Leader>tt` - Toggle between snake_case and camelCase/PascalCase
+   - `<Leader>tc` - Cycle through cases: snake_case → camelCase → PascalCase → snake_case
    - `<Leader>ts` - Convert to snake_case
    - `<Leader>tm` - Convert to camelCase
    - `<Leader>tp` - Convert to PascalCase
@@ -55,8 +55,8 @@ and PascalCase in visual mode.
 
 The following mappings are available in visual mode:
 
-<Leader>tc           Toggle between snake_case and camelCase/PascalCase
-<Leader>cc           Cycle through cases: snake_case → camelCase → PascalCase → snake_case
+<Leader>tt           Toggle between snake_case and camelCase/PascalCase
+<Leader>tc           Cycle through cases: snake_case → camelCase → PascalCase → snake_case
 <Leader>ts           Convert to snake_case
 <Leader>tm           Convert to camelCase
 <Leader>tp           Convert to PascalCase
@@ -72,8 +72,8 @@ You can customize the plugin by passing options to the setup function:
       mappings = false,
       
       -- Or customize the default mappings
-      toggle_mapping = '<Leader>tc',  -- Toggle between cases
-      cycle_mapping = '<Leader>cc',   -- Cycle through cases
+      toggle_mapping = '<Leader>tt',  -- Toggle between cases
+      cycle_mapping = '<Leader>tc',   -- Cycle through cases
       snake_mapping = '<Leader>ts',   -- Convert to snake_case
       camel_mapping = '<Leader>tm',   -- Convert to camelCase
       pascal_mapping = '<Leader>tp'   -- Convert to PascalCase
@@ -90,9 +90,6 @@ snake_case ↔ camelCase ↔ PascalCase:
 
 ==============================================================================
 7. ABOUT                                                 *case-converter-about*
-
-case-converter is maintained by Your Name <your.email@example.com>
-GitHub: https://github.com/your-username/case-converter
 
 License: MIT
 
